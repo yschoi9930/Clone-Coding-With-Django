@@ -1,0 +1,87 @@
+
+
+
+.FooterImgs {
+width : 180px;
+height : 80px;
+margin : 0 10px;
+<<<<<<< HEAD
+=======
+margin-top : 30px;
+>>>>>>> 790d57e180cd7d0307a775c0ffc6db9439e4aa30
+
+}
+
+#FooterImg img:hover {
+cursor:pointer;
+}
+
+.Menu div:hover {
+cursor:pointer;
+}
+
+.Menu {
+display:inline-block;
+vertical-align :top;
+margin-right : 100px;
+margin-top : 50px;
+margin-bottom : 50px;
+}
+
+#Cards {
+margin-top : 10px;
+margin-left : 40px;
+}
+
+.Card {
+display:inline-block;
+width : 40px;
+height : 30px;
+}
+
+.sns {
+display:inline-block;
+width : 35px;
+height :35px;
+}
+
+#snss {
+margin-top : 10px;
+margin-left : 40px;
+}
+
+#Follow li{
+    list-style:none;
+    padding-left:0px;
+    font-weight:bold;
+    font-size:20px;
+    color:black;
+}
+
+#Followus {
+    display:inline-block;
+    margin-left : 130px;
+    margin-top : 50px;
+
+}
+
+#Followus div:hover {
+cursor:pointer;
+}
+
+.MenuName li{
+    list-style:none;
+    padding-left:0px;
+    font-weight:bold;
+    font-size:14px;
+    color:#000000;
+}
+
+.SubMenu li{
+    margin-top : 10px;
+    list-style:none;
+    padding-left:0px;
+    font-weight:bold;
+    font-size:14px;
+    color:grey;
+}

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* common.css */
+
+
+body::-webkit-scrollbar {display:none;}
+
+* {margin:0 auto;}
+
+#Wrap {
+    width:1900px;
+    position:relative;
+    margin:0 auto;
+    }
+* {
+    margin:0;
+}
+
+#Wrap {
+    width:1900px;
+    overflow:hidden;
+}
+
+#Wrap2 {
+    margin:0 auto;
+    width:1500px;
+}

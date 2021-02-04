@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* common.css */
+
+* {
+    margin:0;
+}
+
+#Wrap {
+    width:1900px;
+    overflow:hidden;
+}
+
+#Wrap2 {
+    margin:0 auto;
+    width:27%;
+    /*background:green;*/
+    height:950px;
+    position:relative;
+    margin-top:80px;
+}
+
+#MiniWrap2 {
+    width:95%;
+    height:80%;
+    /*background:yellow;*/
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    position:absolute;
+}

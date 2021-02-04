@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* login.css */
+
+#MiniWrap2 div {
+    width:100%;
+    height:50px;
+    text-align:center;
+    vertical-align:center;
+    border:1px solid black;
+    margin-top:20px;
+}
+
+#LoginTxt {
+    font-weight:bold;
+    font-size:25px;
+}
+
+#Login {
+    margin-top:40px;
+    width:100%;
+}
+
+#Login input {
+    width:100%;
+    height:40px;
+}
+
+input[type='submit'] {
+    background:#ff66aa;
+    color:#ffffff;
+    font-size:18px;
+    font-weight:bold;
+    border:none;
+}
+
+#MiniWrap2 img {
+    width:15%;
+}
