@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from main.views import index
 from login.views import login
+from community.views import community
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='main'),
     path('login/', login, name='login'),
+    path('community/', community, name='community')
 ]

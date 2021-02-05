@@ -4,32 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <title>와그WAUG - Explore more.</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/login_header.css'%}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/login_common.css'%}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login_header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login_common.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
     <script src="{% static 'js/jquery-3.5.1.min.js'%}"></script>
     <script src="{% static 'js/headerScroll.js'%}"></script>
 </head>
 <body>
     <div id="Wrap">
         <header>
-                <a href="../Waug.html"><img src="{% static 'image/waug_logo.png'%}" id="Logo"></a>
-                <span id="topMenuBox"><span>한국어 ▽</span><span>KRW 대한민국 원(₩) ▽</span><span><a href="#">로그인</a></span></span>
+                <a href="http://127.0.0.1:8000/"><img src="{% static 'image/waug_logo.png'%}" id="Logo"></a>
+                <span id="topMenuBox"><span><a href="http://127.0.0.1:8000/community/">게시판</a></span><span>한국어 ▽</span><span>KRW 대한민국 원(₩) ▽</span><span>로그인</span></span>
         </header><!-- header 종료 -->
     </div><!--Wrap 종료-->
     <div id="Wrap2">
         <div id="MiniWrap2">
             <span id="LoginTxt">로그인</span>
             <form name="login" action="#" id="Login">
-                <input type="email" placeholder="이메일 주소"><br>
-                <input type="password" placeholder="비밀번호"><br>
-                <input type="submit" value="로그인"><br>
+                <input type="email" class="good" placeholder="이메일 주소"><br>
+                <input type="password" class="good" placeholder="비밀번호"><br>
+                <input type="submit" class="good" value="로그인"><br>
                 <input type="checkbox"><span>자동 로그인 · </span><span><a href="#">비밀번호 찾기</a></span>
             </form>
             <span>·······························or·······························</span>
-            <div><img src="{% static 'image/facebook.svg'%}"><span> 로그인</span></div>
+            <div><img src="{% static 'image/facebook1.svg'%}"><span> 로그인</span></div>
             <div><img src="{% static 'image/kakao.svg'%}"><span> 로그인</span></div>
-            <div><img src="{% static 'image/naver.svg'%}"><span> 로그인</span></div>
+            <div><img src="{% static 'image/naver1.svg'%}"><span> 로그인</span></div>
             <div><img src="{% static 'image/google.svg'%}"><span> 로그인</span></div>
             <span>아직 와그의 멤버가 아니세요? </span><span><a href="../Signup.html">회원가입</a></span>
         </div>
