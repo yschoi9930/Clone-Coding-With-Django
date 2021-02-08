@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+#promotionimg_Snow{
+    display:inline-block;
+    width:260px;
+    height:170px;
+    border-radius:7px;
+    margin-right:20px;
+}
+
+#promotionimg_Resort{
+    display:inline-block;
+    width:260px;
+    height:170px;
+    border-radius:7px;
+    margin-right:20px;
+}
+
+#promotionimg_Aqua{
+    display:inline-block;
+    width:260px;
+    height:170px;
+    border-radius:7px;
+    margin-right:20px;
+}
+#promotionimg_Seoul{
+    display:inline-block;
+    width:260px;
+    height:170px;
+    border-radius:7px;
+    margin-right:20px;
+}
+#promotionimg_Ever{
+    display:inline-block;
+    width:260px;
+    height:170px;
+    border-radius:7px;
+    margin-right:20px;
+}
+
+.Price li {
+    list-style:none;
+    padding-left:0px;
+    font-size:12.5px;
+    color:#a897a7;
+    text-decoration:line-through;
+}
+
+span.Discount {
+    list-style:none;
+    padding-left:0px;
+    font-size:18px;
+    color:#000000;
+    font-weight:bold;
+    padding-left : 40px;
+}
+
+span.CouponPrice {
+    list-style:none;
+    padding-left:0px;
+    font-size:14px;
+    color:#FF00A2;
+    font-weight:bold;
+}
+
+span.Star {
+     color:#FF00A2;
+     padding-left:38px;
+ }
+
+ span.Rate {
+     color:#000000;
+     font-weight:bold;
+     font-size:13px;
+ }
+
+
+ span.Reviews {
+     color:#a897a7;
+     font-weight:bold;
+     font-size:13px;
+ }
+
+.PromotionImg {
+margin : 0 18px;
+margin-bottom : 6px;
+text-align:center;
+margin-top : 15px;
+
+}
+
+.PromotionImg img:hover {
+cursor:pointer;
+}
+
+.PromotionBox div:hover {
+cursor:pointer;
+}
+
+.PromotionBox {
+display:inline-block;
+word-break:normal;
+width : 18.5%;
+vertical-align :top;
+margin-bottom:50px;
+
+}
+
+#PromotionTotal {
+margin-left :60px;
+left:20px;
+}
+
+#Promotion {
+    position:relative;
+    margin-top:50px;
+}
+
+.GoRight {
+    margin-left:30px;
+}
+
+

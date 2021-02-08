@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block extrahead %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+{% endblock %}
+{% block content %}
+    <div id="Wrap2">
+        <div id="MiniWrap2">
+            <span id="LoginTxt">로그인</span>
+            <form method="post" action="{% url 'login' %}" name="login" id="Login">
+                {% csrf_token %}
+                {% include "form_errors.html" %}
+                <input class="boxbox" type="username" name="username" id="username" placeholder="이메일 주소"><br>
+                <input class="boxbox" type="password" name="password" id="password" placeholder="비밀번호"><br>
+                <button type="submit">로그인</button><br>
+                <div><input type="checkbox"><span>자동 로그인 · </span><span><a href="#">비밀번호 찾기</a></span></div>
+            </form>
+            <span>······················································or······················································</span>
+            <div><img src="{% static 'image/facebook.svg' %}"><span> 로그인</span></div>
+            <div><img src="{% static 'image/kakao.svg' %}"><span> 로그인</span></div>
+            <div><img src="{% static 'image/naver.svg' %}"><span> 로그인</span></div>
+            <div><img src="{% static 'image/google.svg' %}"><span> 로그인</span></div>
+            <span>아직 와그의 멤버가 아니세요? </span><span><a href="{% url 'signup' %}">회원가입</a></span>
+        </div>
+    </div> <!-- Wrap2 종료 -->
+{% endblock %}

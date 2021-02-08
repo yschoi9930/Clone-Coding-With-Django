@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block extrahead %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/Signup.css' %}">
+{% endblock %}
+{% block content %}
+<form name = "Signup" method ="post">
+    {% csrf_token %}
+    {% include "form_errors.html" %}
+    <div id = "SignupWrap">
+        <h2>회원가입</h2>
+        <div id = "Inputblock">
+            <input class ='Block' name = 'email'  id="email" type = 'email' value="{{ form.email.value|default_if_none:'' }}" placeholder="이메일"/>
+            <input class ='Block' name = 'password1' id="password1" type = 'password' value="{{ form.password1.value|default_if_none:'' }}" placeholder="비밀번호(영문,숫자,특수문자 8자리 이상)"/>
+            <input class ='Block' name = 'password2' id="password2" type = 'password' value="{{ form.password2.value|default_if_none:'' }}" placeholder="비밀번호 확인"/>
+            <input class ='Block' name = 'username' id="username" type = 'text' value="{{ form.username.value|default_if_none:'' }}" placeholder="이름"/>
+            <label id = "event"><input id = "checkbox" type="checkbox" name="event" value="agree">이벤트 및 뉴스레터를 이메일로 받아 보겠습니다.</label>
+            <button type="submit" id = "Signup">회원가입</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

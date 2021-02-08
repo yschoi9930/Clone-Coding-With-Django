@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* Signup.css */
+
+#SignupWrap {
+margin:auto;
+text-align:center;
+}
+
+#Inputblock{
+display:inline-block;
+margin: 0 auto;
+width:380px;
+height:500px;
+}
+
+.Block {
+margin: 0 auto;
+width:360px;
+height : 35px;
+margin-top:30px;
+border-radius:5px;
+color : grey;
+border-size : 2px;
+}
+
+#checkbox {
+margin-bottom:30px;
+margin-top:15px
+}
+
+#Signup{
+width:370px;
+height : 40px;
+background-color:#FF00A2;
+text-align :center;
+line-height: 40px;
+}
+
+#Signup:hover {
+cursor:pointer;
+}

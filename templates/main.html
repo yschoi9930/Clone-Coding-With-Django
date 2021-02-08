@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>와그 - 당신이 찾는 모든 여행이 여기에</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/navigator.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slideShow.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Destination.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/promotion.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/recommend.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Footer2.css' %}">
+    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'js/slideshow.js' %}"></script>
+    <script src="{% static 'js/headerScroll.js' %}"></script>
+    <script src="{% static 'js/slideShow_jcd.js' %}"></script>
+</head>
+<body>
+    <div id="Wrap">
+        <header>
+            <a href="{% url 'main' %}"><img src="{% static 'image/waug_logo.svg'%}" id="whiteLogo"></a>
+            <span id="topMenuBox"><span><a href="{% url 'community:index' %}">게시판</a></span><span>한국어 ▽</span><span>KRW 대한민국 원(₩) ▽</span>
+                <span>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}">{{ user.username }} (로그아웃)</a>
+                    {% else %}
+                    <a href="{% url 'login' %}">로그인</a>
+                    {% endif %}
+                </span>
+            </span>
+        </header><!-- header 종료 -->
+        <article id="Main">
+            <div id="MainPhoto">
+                <img src="{% static 'image/main1.jpg'%}">
+                <img src="{% static 'image/main2.jpg'%}">
+            </div>
+            <div id="SearchBox">
+                <div id="TBox">
+                    <span>낭만 가득한 겨울 캠핑을 만나보세요.</span>
+                    <br>
+                    <input type="text" placeholder="액티비티 또는 지역명으로 검색하세요">
+                </div>
+            </div>
+            <div id="Appendix">
+                <span>감성 차박 패키지</span>
+            </div>
+            <div id="Button">
+                <img src="{% static 'image/controlButton2.png'%}" class="Btn">
+                <img src="{% static 'image/controlButton1.png'%}" class="Btn">
+            </div>
+        </article><!-- Main 종료 -->
+        <nav>
+            <table id="navBox">
+                <tr>
+                    <td><img src="{% static 'image/nav1.png'%}" class="navImg"></td>
+                    <td><img src="{% static 'image/nav2.png'%}" class="navImg"></td>
+                    <td><img src="{% static 'image/nav3.png'%}" class="navImg"></td>
+                    <td><img src="{% static 'image/nav4.png'%}" class="navImg"></td>
+                    <td><img src="{% static 'image/nav5.png'%}" class="navImg"></td>
+                    <td><img src="{% static 'image/nav6.png'%}" class="navImg"></td>
+                    <td><img src="{% static 'image/nav7.png'%}" class="navImg"></td>
+                    <td><img src="{% static 'image/nav8.svg'%}" class="navImg"></td>
+                </tr>
+                <tr id="navImgText">
+                    <td>투어&티켓</td>
+                    <td>숙소</td>
+                    <td>교통수단</td>
+                    <td>유심&와이파이</td>
+                    <td>레스토랑</td>
+                    <td>골프</td>
+                    <td>렌터카</td>
+                    <td>여행자 보험</td>
+                </tr>
+            </table>
+        </nav><!-- nav 종료 -->
+
+        <!----------------------jcd--------------------->
+    <div id="Wrap2">
+        <article  id="popular">
+        <div id = "text">
+            <div><a><img src="{% static 'image/cross.svg'%}" align="right" id="logoImg"></a></div>
+            <h2>인기 여행지</h2>
+            <h5>2021년 가장 핫한 여행지를 추천해요</h5>
+
+
+        </div>
+        <div id="DestinationBox">
+            <div class='Destination'>
+
+
+
+                <div class="span_text"><a href="#"><img src="{% static 'image/jeju.jpg'%}"></a><span class="over_text">제 주</span></div>
+                <div class="span_text"><a href="#"><img src="{% static 'image/seoul.jpg'%}"></a><span class="over_text">서 울</span></div>
+                <div class="span_text"><a href="#"><img src="{% static 'image/busan.jpg'%}"></a><span class="over_text">부 산</span></div>
+                <div class="span_text"><a href="#"><img src="{% static 'image/everland.jpg'%}"></a><span class="over_text">에버 랜드</span></div>
+                <div class="span_text"><a href="#"><img src="{% static 'image/jungdongjin.jpg'%}"></a><span class="over_text">정 동 진</span></div>
+                <div class="span_text"><a href="#"><img src="{% static 'image/songdo.jpg'%}"></a><span class="over_text">인 천</span></div>
+                <div class="span_text"><a href="#"><img src="{% static 'image/jiri.jpg'%}"></a><span class="over_text">경 상 도</span></div>
+                <div class="span_text"><a href="#"><img src="{% static 'image/dokdo.jpg'%}"></a><span class="over_text">독 도</span></div>
+
+
+            </div>
+
+
+
+        </div>
+        <div id="ShowAllCities">
+            <h5>여행지 모두 보기(+172 Cities)</h5>
+        </div>
+        </article>
+    <article id="slideShow">
+        <div id="prevNextButtonBox">
+            <img id="prevButton" src="{% static 'image/prevButton.png'%}">
+            <img id="nextButton" src="{% static 'image/nextButton.png'%}">
+        </div>
+        <div id="slideShowBox">
+            <div id="slidePanel">
+                <img src="{% static 'image/slide_img_01.png'%}" class="slideImage">
+                <img src="{% static 'image/slide_img_02.png'%}" class="slideImage">
+                <img src="{% static 'image/slide_img_03.png'%}" class="slideImage">
+                <img src="{% static 'image/slide_img_04.png'%}" class="slideImage">
+                <img src="{% static 'image/slide_img_05.png'%}" class="slideImage">
+                <img src="{% static 'image/slide_img_06.png'%}" class="slideImage">
+            </div>
+        </div>
+        <div id="controlPanel">
+            <img src="{% static 'image/controlButton1.png'%}" class="controlButton">
+            <img src="{% static 'image/controlButton1.png'%}" class="controlButton">
+            <img src="{% static 'image/controlButton1.png'%}" class="controlButton">
+            <img src="{% static 'image/controlButton1.png'%}" class="controlButton">
+            <img src="{% static 'image/controlButton1.png'%}" class="controlButton">
+            <img src="{% static 'image/controlButton1.png'%}" class="controlButton">
+         </div>
+    </article>
+
+    <div id="Promotion">
+        <div><h2 class="GoRight">와그 추천</h2></div>
+        <div id="PromotionList">
+            <div class = "PromotionImg">
+                <img id="promotionimg_Snow" src="{% static 'image/Snowhill.jpg'%}">
+                <img id="promotionimg_Resort" src="{% static 'image/Resort.jpg'%}">
+                <img id="promotionimg_Aqua" src="{% static 'image/Aquarium.jpg'%}">
+                <img id="promotionimg_Seoul" src="{% static 'image/SeoulTower.jpg'%}">
+                <img id="promotionimg_Ever" src="{% static 'image/Everland.jpg'%}">
+            </div>
+
+        <div id="promotionTotal">
+            <div class="PromotionBox">
+                <div class="Subtitle">
+                    <ul>
+                        <li>오늘부터 사용 가능</li>
+                    </ul>
+                </div>
+                <div class="Title">
+                    <ul>
+                        <li>강원 20/21 엘리시안 강촌 눈썰매장 스노우힐 & 펀파크</li>
+                    </ul>
+                </div>
+                <div class="Review">
+                    <span class="Star">★</span>
+                    <span class = 'Rate'>4.5</span>
+                    <span class = "Reviews">(이용후기 6건)</span>
+                </div>
+                <div class="Price">
+                    <ul>
+                        <li>￦20,000</li>
+                    </ul>
+                </div>
+                <div class="DiscountPrice">
+                    <span class = "Discount">￦12,000</span>
+                    <span class = "CouponPrice">쿠폰적용가</span>
+                </div>
+            </div>
+
+             <!----------------------Resort------------------>
+
+            <div class="PromotionBox">
+
+                <div class="Subtitle">
+                    <ul>
+                        <li>내일부터 사용 가능</li>
+                    </ul>
+                </div>
+                <div class="Title">
+                    <ul>
+                        <li>강릉 하슬라이트월드 입장권 - 단독 최저가</li>
+                    </ul>
+                </div>
+                <div class="Review">
+                    <span class="Star">★</span>
+                    <span class = 'Rate'>4.8</span>
+                    <span class = "Reviews">(이용후기 32건)</span>
+                </div>
+                <div class="Price">
+                    <ul>
+                        <li>￦10,000</li>
+                    </ul>
+                </div>
+                <div class="DiscountPrice">
+                    <span class = "Discount">￦8,400</span>
+                    <span class = "CouponPrice">쿠폰적용가</span>
+                </div>
+            </div>
+
+            <!----------------------Aquarium------------------>
+
+            <div class="PromotionBox">
+
+                <div class="Subtitle">
+                    <ul>
+                        <li>오늘부터 사용 가능</li>
+                    </ul>
+                </div>
+                <div class="Title">
+                    <ul>
+                        <li>씨라이프 부산 아쿠아리움 입장권</li>
+                    </ul>
+                </div>
+                <div class="Review">
+                    <span class="Star">★</span>
+                    <span class = 'Rate'>4.7</span>
+                    <span class = "Reviews">(이용후기 33건)</span>
+                </div>
+                <div class="Price">
+                    <ul>
+                        <li>￦29,000</li>
+                    </ul>
+                </div>
+                <div class="DiscountPrice">
+                    <span class = "Discount">￦17,000</span>
+                    <span class = "CouponPrice">쿠폰적용가</span>
+                </div>
+            </div>
+
+            <!----------------------SeoulTower------------------>
+
+            <div class="PromotionBox">
+                <div class="Subtitle">
+                    <ul>
+                        <li>오늘부터 사용 가능</li>
+                    </ul>
+                </div>
+                <div class="Title">
+                    <ul>
+                        <li>N서울타워 전망대 - 단독 최저가</li>
+                    </ul>
+                </div>
+                <div class="Review">
+                    <span class="Star">★</span>
+                    <span class = 'Rate'>4.8</span>
+                    <span class = "Reviews">(이용후기 114건)</span>
+                </div>
+                <div class="Price">
+                    <ul>
+                        <li>￦16,000</li>
+                    </ul>
+                </div>
+                <div class="DiscountPrice">
+                    <span class = "Discount">￦11,500</span>
+                    <span class = "CouponPrice">쿠폰적용가</span>
+                </div>
+            </div>
+
+            <!----------------------Everland------------------>
+
+            <div class="PromotionBox">
+                <div class="Subtitle">
+                    <ul>
+                        <li>오늘부터 사용 가능</li>
+                    </ul>
+                </div>
+                <div class="Title">
+                    <ul>
+                        <li>에버랜드 겨울방학 탐구생활 종일/야간이용권(1/1~2/28까지)</li>
+                    </ul>
+                </div>
+                <div class="Review">
+                    <span class="Star">★</span>
+                    <span class = 'Rate'>5.0</span>
+                    <span class = "Reviews">(이용후기 1건)</span>
+                </div>
+                <div class="Price">
+                    <ul>
+                        <li>￦47,000</li>
+                    </ul>
+                </div>
+                <div class="DiscountPrice">
+                    <span class = "Discount">    ￦19,000</span>
+                    <span class = "CouponPrice">쿠폰적용가</span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <!----------------------Recommend----------------->
+
+    <div id="Recommend">
+        <div>
+            <h2 class="GoRight">이런 여행은 어때요?</h2>
+            <h5 class="GoRight">와그 에디터가 추천하는 여행을 만나보세요</h5>
+        </div>
+        <div id="RecommendList">
+            <div class = "RecommendImg" >
+                <img id="Recommendimg_Ski" src="{% static 'image/ski.jpg'%}">
+                <img id="Recommendimg_Res" src="{% static 'image/Restaurant.jpg'%}">
+                <img id="Recommendimg_Jeju" src="{% static 'image/Jejuisland.jpg'%}">
+                </div>
+            <div class="RecommendBox">
+                <div class="Subtitle">
+                    <ul>
+                        <li>전국스키대전</li>
+                    </ul>
+                </div>
+                <div class="Title">
+                    <ul>
+                        <li>시즌권부터 리프트권, 눈썰매장 이용권까지 다 있어요</li>
+                    </ul>
+                </div>
+                <div class="Description">
+                     <ul>
+                        <li>스키 장비랑 의류도 렌탈돼요</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="RecommendBox">
+                <div class="Subtitle">
+                    <ul>
+                        <li>단독 프로모션</li>
+                    </ul>
+                </div>
+                <div class="Title">
+                    <ul>
+                        <li>최고급 레스토랑을 만나보세요.</li>
+                    </ul>
+                </div>
+                <div class="Description">
+                     <ul>
+                        <li>소중한 사람과 행복한 시간을 보내세요</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="RecommendBox">
+                <div class="Subtitle">
+                    <ul>
+                        <li>한달살기</li>
+                    </ul>
+                </div>
+                <div class="Title">
+                    <ul>
+                        <li>제주도에서 살아볼까요?</li>
+                    </ul>
+                </div>
+                <div class="Description">
+                     <ul>
+                        <li>일주일부터 한달까지 자유롭게 이용하세요.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer id="Footer">
+        <div>
+            <h2 class="GoRight">와그 파트너</h2>
+            <h5 class="GoRight">전세계의 파트너와 함께 다양한 프로모션을 제공해요</h5>
+        </div>
+        <div id = FooterImg>
+            <img class = "FooterImgs" src="{% static 'image/universalstudio_gray.png'%}">
+            <img class = "FooterImgs" src="{% static 'image/disneyland_gray.png'%}">
+            <img class = "FooterImgs" src="{% static 'image/bigbus_gray.png'%}">
+            <img class = "FooterImgs" src="{% static 'image/eurail_gray.png'%}">
+            <img class = "FooterImgs" src="{% static 'image/jr_gray.png'%}">
+            <img class = "FooterImgs" src="{% static 'image/merlinentertainments_gray.png'%}">
+            <img class = "FooterImgs" src="{% static 'image/goldenfuture_gray.png'%}">
+        </div>
+        <div class = Menu>
+            <div class = MenuName>
+                <ul>
+                    <li>고객센터</li>
+                </ul>
+            </div>
+            <div class = SubMenu>
+                <ul>
+                    <li>FAQ</li>
+                    <li>이용약관</li>
+                    <li>개인정보 취급방침</li>
+                </ul>
+            </div>
+        </div>
+        <div class = Menu>
+            <div class = MenuName>
+                <ul>
+                    <li>회사소개</li>
+                </ul>
+            </div>
+            <div class = SubMenu>
+                <ul>
+                    <li>About us</li>
+                </ul>
+            </div>
+        </div>
+        <div class = Menu>
+            <div class = MenuName>
+                <ul>
+                    <li>파트너쉽</li>
+                </ul>
+            </div>
+            <div class = SubMenu>
+                <ul>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+        </div>
+        <div class = Menu>
+            <div class = MenuName>
+                <ul>
+                    <li>결제수단</li>
+                </ul>
+            </div>
+            <div id = Cards>
+                <img class = "Card" src="{% static 'image/visa.svg'%}">
+                <img class = "Card" src="{% static 'image/mastercard.svg'%}">
+                <img class = "Card" src="{% static 'image/amex.svg'%}">
+            </div>
+        </div>
+        <div id = Followus>
+            <div id = Follow>
+                <ul>
+                    <li>Follow us</li>
+                </ul>
+            </div>
+            <div id = snss>
+                <img class = "sns" src="{% static 'image/facebook.svg'%}">
+                <img class = "sns" src="{% static 'image/instagram.svg'%}">
+                <img class = "sns" src="{% static 'image/naver.svg'%}">
+                <img class = "sns" src="{% static 'image/blog.svg'%}">
+            </div>
+        </div>
+    </footer>
+    </div><!-- Wrap2 종료 -->
+    </div><!--Wrap 종료-->
+</body>
+</html>
