@@ -9,6 +9,7 @@
             <span id="LoginTxt">로그인</span>
             <form method="post" action="{% url 'login' %}" name="login" id="Login">
                 {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}">
                 {% include "form_errors.html" %}
                 <input class="boxbox" type="username" name="username" id="username" placeholder="이메일 주소"><br>
                 <input class="boxbox" type="password" name="password" id="password" placeholder="비밀번호"><br>

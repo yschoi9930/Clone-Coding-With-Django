@@ -16,6 +16,10 @@ header>span {
     float:right;
     margin-right:140px;
 }
+header a {
+    color:white;
+    text-decoration:none;
+}
 header>span span {
     margin:15px;
 }
